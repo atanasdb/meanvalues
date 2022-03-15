@@ -21,10 +21,10 @@ public class Mean {
     }
 
     /**
-     * Gets the mean value of the slice
+     * Gets the mean value of a slice in the array
      * @param l Left boundary of the slice
      * @param r Right boundary of the slice
-     * @return The mean value
+     * @return The mean value of the slice
      * @throws IllegalArgumentException in case of out of boundary slice indexes
      */
     public double getMean(int l, int r) {
