@@ -18,19 +18,25 @@ public class MeanTest {
     @Test(expected = IllegalArgumentException.class)
     public void testInvalidOrderBoundaries()  {
         final Mean m = new Mean(new int[]{1, 1, 2, 3, 1, 4});
-        m.getMean(2,1);
+        m.getMean(2, 1);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testInvalidBoundariesL()  {
         final Mean m = new Mean(new int[]{1, 1, 2, 3, 1, 4});
-        m.getMean(6,2);
+        m.getMean(6, 2);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testInvalidBoundariesR()  {
         final Mean m = new Mean(new int[]{1, 1, 2, 3, 1, 4});
-        m.getMean(2,6);
+        m.getMean(2, 6);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testNegativeBoundaries()  {
+        final Mean m = new Mean(new int[]{1, 1, 2, 3, 1, 4});
+        m.getMean(-2, 2);
     }
 
     @Test

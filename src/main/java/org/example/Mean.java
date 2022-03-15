@@ -13,7 +13,7 @@ public class Mean {
     }
 
     public double getMean(int l, int r) {
-        if (!((l <= r ) && (l < preCalcSums.length) && (r < preCalcSums.length))) {
+        if (!((l >= 0) && (r >= 0) && (l <= r ) && (l < preCalcSums.length) && (r < preCalcSums.length))) {
             throw new IllegalArgumentException("illegal slice");
         }
         final int sliceSum = preCalcSums[r] - (l > 0 ? preCalcSums[l - 1] : 0);
